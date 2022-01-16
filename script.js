@@ -26,3 +26,36 @@ number = Math.floor(number);
 console.log(numberOne >= 2);
 console.log(+numberOne);
 
+const userName = prompt('Как тебя зовут?');
+const userYear = +prompt('Сколько тебе лет?');
+const userUse = confirm('Алкоголь употребляем?');
+
+if (+userYear >= 40) {
+
+    if (userUse === false) {
+        console.log('Так держать!');
+    } else {
+        console.log('Не злоупотребляйте');
+    }
+}
+
+if (+userYear < 18) {
+
+    if (userUse === false) {
+        console.log('Так держать!');
+    } else {
+        console.log('Ты что?! Маме расскажу');
+    }
+}
+
+if (+userYear >= 18 && +userYear <=40) {
+
+    if (userUse === false) {
+        console.log('Так держать!');
+    } else {
+        console.log('Только водку с пивом не мешай...');
+    }
+}
+
+
+
