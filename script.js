@@ -1,19 +1,8 @@
-console.log("Hello, World!");
+const firstNumber = 123;
+const secondNumber = 321;
 
-console.info("HELLO");
-
-console.error("Something went wrong");
-
-console.count("TEST");
-console.count("TEST");
-console.count("TEST");
-console.count("TEST");
-console.count("TEST");
-
-console.count("HELLO");
-console.count("HELLO");
-console.count("HELLO");
-
-console.time("REQUEsT");
-
-console.timeEnd("REQUEsT");
+if (firstNumber > secondNumber) {
+    console.log(firstNumber);
+} else {
+    console.log(secondNumber);
+}
