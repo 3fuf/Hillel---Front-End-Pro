@@ -8,54 +8,31 @@ if (firstNumber > secondNumber) {
 }
 
 
-let number = 1234;
+const n = 1234;
 
-let numberOne = number % 10;
-number /= 10;
-number = Math.floor(number);
-let numberTwo = number % 10;
-number /= 10;
-number = Math.floor(number);
-let numberThree = number % 10;
-number /= 10;
-number = Math.floor(number);
-let numberFour = number % 10;
-number /= 10;
-number = Math.floor(number);
+const nOne = n % 10;
 
-console.log(numberOne >= 2);
-console.log(+numberOne);
+if (nOne % 2 === 0) {
+    console.log(nOne, 'Парное')
+} else {
+    console.log(nOne, 'Не парное');
+}
 
 const userName = prompt('Как тебя зовут?');
 const userYear = +prompt('Сколько тебе лет?');
 const userUse = confirm('Алкоголь употребляем?');
 
-if (+userYear >= 40) {
-
-    if (userUse === false) {
-        console.log('Так держать!');
-    } else {
+if (userUse) {
+    if (+userYear >= 40) {
         console.log('Не злоупотребляйте');
     }
-}
-
-if (+userYear < 18) {
-
-    if (userUse === false) {
-        console.log('Так держать!');
-    } else {
+    else if (+userYear < 18) {
         console.log('Ты что?! Маме расскажу');
     }
-}
-
-if (+userYear >= 18 && +userYear <=40) {
-
-    if (userUse === false) {
-        console.log('Так держать!');
-    } else {
+    else {
         console.log('Только водку с пивом не мешай...');
     }
+
+} else {
+    console.log('Так держать!');
 }
-
-
-
