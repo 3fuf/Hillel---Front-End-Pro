@@ -1,38 +1,41 @@
-const firstNumber = 123;
-const secondNumber = 321;
+console.log('№1');
 
-if (firstNumber > secondNumber) {
-    console.log(firstNumber);
-} else {
-    console.log(secondNumber);
+let str = '';
+for (i = 10; i <= 20; i++) {
+    str = str + i;
+}
+console.log(str);
+
+console.log('№2');
+
+for (i = 10; i <= 20; i++) {
+    console.log(Math.pow(i, 2));
+}
+console.log(' ');
+
+console.log('№3');
+
+let seven = 7;
+for (i = 1; i <= 10; i++) {
+    Number = i * seven;
+    console.log(Number);
 }
 
+console.log('№4');
 
-const n = 1234;
-
-const nOne = n % 10;
-
-if (nOne % 2 === 0) {
-    console.log(nOne, 'Парное')
-} else {
-    console.log(nOne, 'Не парное');
+let count = 0;
+for (i = 1; i <= 15; i++) {
+    count += i;
 }
+console.log(count);
 
-const userName = prompt('Как тебя зовут?');
-const userYear = +prompt('Сколько тебе лет?');
-const userUse = confirm('Алкоголь употребляем?');
+console.log('№5');
 
-if (userUse) {
-    if (+userYear >= 40) {
-        console.log('Не злоупотребляйте');
-    }
-    else if (+userYear < 18) {
-        console.log('Ты что?! Маме расскажу');
-    }
-    else {
-        console.log('Только водку с пивом не мешай...');
-    }
+console.log('№6');
 
-} else {
-    console.log('Так держать!');
+let means = 0;
+for (i = 1; i <= 500; i++) {
+    means += i;
 }
+console.log(means / 500);
+
