@@ -2,7 +2,7 @@ console.log('№1');
 
 let str = '';
 for (i = 10; i <= 20; i++) {
-    str = str + i + ' , ';
+    str = str + i + ', ';
 }
 console.log(str);
 console.log(' ');
@@ -18,8 +18,7 @@ console.log('№3');
 
 let seven = 7;
 for (k = 1; k <= 10; k++) {
-    Number = k * seven;
-    console.log(Number);
+    console.log(k + '*' + seven + '=' + (k * seven));
 }
 console.log(' ');
 
@@ -74,9 +73,9 @@ let numb = 22;
 let summ = 0;
 for (let s = 1; s <= numb; s++){
     if(numb % s === 0 && numb !== numb && numb !== 1) {
-        if (s % 2 === 0) continue;
-        console.log(summ += s);
-
+        if (s % 2 === 0) {
+            console.log(summ += s)
+        }
     }
     console.log(s);
 
@@ -92,8 +91,6 @@ for (let multTable = 1; multTable <= 10; multTable++) {
         document.write('<p>' + multTable + '*' + multЕableМariable + '=' + (multTable * multЕableМariable) + '</p>');
     }
 }
-
-document.write("<p>"+i+"*"+j+" = "+(i*j)+"</p>");
 
 console.log(' ');
 
