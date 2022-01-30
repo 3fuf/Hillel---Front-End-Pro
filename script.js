@@ -1,7 +1,7 @@
 console.log('№1');
 
 let str = '';
-for (i = 10; i <= 20; i++) {
+for (let i = 10; i <= 20; i++) {
     str = str + i + ', ';
 }
 console.log(str);
@@ -9,89 +9,90 @@ console.log(' ');
 
 console.log('№2');
 
-for (j = 10; j <= 20; j++) {
-    console.log(Math.pow(j, 2));
+for (let i = 10; i <= 20; i++) {
+    console.log(Math.pow(i, 2));
 }
 console.log(' ');
 
 console.log('№3');
 
-let seven = 7;
-for (k = 1; k <= 10; k++) {
-    console.log(k + '*' + seven + '=' + (k * seven));
+const seven = 7;
+for (let i = 1; i <= 10; i++) {
+    console.log(i + '*' + seven + '=' + (i * seven));
 }
 console.log(' ');
 
 console.log('№4');
 
 let count = 0;
-for (l = 1; l <= 15; l++) {
-    count += l;
+for (let i = 1; i <= 15; i++) {
+    count += i;
 }
 console.log(count);
 console.log(' ');
 
 console.log('№5');
 
-let q = 1;
-for (p = 15; p <= 35; p++) {
-    q *= p
+let multiplication = 1;
+for (let i = 15; i <= 35; i++) {
+    multiplication *= i;
 }
-console.log(q);
+console.log(multiplication);
 console.log(' ');
 
 console.log('№6');
 
+const average = 500;
 let means = 0;
-for (m = 1; m <= 500; m++) {
-    means += m;
+for (let i = 1; i <= 500; i++) {
+    means += i;
 }
-console.log(means / 500);
+console.log(means / average);
 console.log(' ');
 
 console.log('№7');
 
-for (let n = 30; n <= 80; n++) {
-    if (n % 2 === 0) {
-        console.log(n);
+for (let i = 30; i <= 80; i++) {
+    if (i % 2 === 0) {
+        console.log(i);
     }
 }
 console.log(' ');
 
 console.log('№8');
 
-for (let r = 100; r <= 200; r++) {
-    if (r % 3 === 0) {
-        console.log(r);
+for (let i = 100; i <= 200; i++) {
+    if (i % 3 === 0) {
+        console.log(i);
     }
 }
 console.log(' ');
 
 console.log('№9');
 
-let numb = 22;
+const numb = 22;
 let summ = 0;
-for (let s = 1; s <= numb; s++){
-    if(numb % s === 0 && numb !== numb && numb !== 1) {
-        if (s % 2 === 0) {
-            console.log(summ += s)
+let countEven = 0;
+for (let i = 1; i <= numb; i++){
+    if(numb % i === 0) {
+        if (i % 2 === 0) {
+            summ += i;
+            countEven++;
         }
+        console.log(i);
     }
-    console.log(s);
-
 }
-
+console.log(summ, countEven);
 console.log(' ');
 
 console.log('№10');
 
-for (let multTable = 1; multTable <= 10; multTable++) {
+for (let i = 1; i <= 10; i++) {
 
-    for (let multЕableМariable = 1; multЕableМariable <= 10; multЕableМariable++) {
-        document.write('<p>' + multTable + '*' + multЕableМariable + '=' + (multTable * multЕableМariable) + '</p>');
+    for (let j = 1; j <= 10; j++) {
+        document.write('<p>' + i + '*' + j + '=' + (i * j) + '</p>');
     }
 }
-
 console.log(' ');
 
 console.log('№11');
@@ -107,14 +108,13 @@ while (true) {
         alert('Не верно - ' + value);
     }
 }
-
 console.log(' ');
 
 console.log('№12');
 
 triangle = '';
 let height = +prompt('Введите число');
-for (i = 0; i <= height; i++) {
+for (i = 0; i < height; i++) {
     triangle += '$';
     console.log(triangle);
 }
