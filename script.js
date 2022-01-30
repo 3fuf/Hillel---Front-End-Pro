@@ -2,7 +2,7 @@ console.log('№1');
 
 let str = '';
 for (i = 10; i <= 20; i++) {
-    str = str + i;
+    str = str + i + ' , ';
 }
 console.log(str);
 console.log(' ');
@@ -100,7 +100,7 @@ console.log('№11');
 
 let guessNumber = 9;
 while (true) {
-    let value = +prompt('Угадай число от 0 до 10', '')
+    let value = +prompt('Угадайте число от 0 до 10', 'Введите число')
     if (value === guessNumber) {
         alert('Верно - это ' + guessNumber);
         break;
@@ -108,4 +108,15 @@ while (true) {
     if (!value) break; {
         alert('Не верно - ' + value);
     }
+}
+
+console.log(' ');
+
+console.log('№12');
+
+triangle = '';
+let height = +prompt('Введите число');
+for (i = 0; i <= height; i++) {
+    triangle += '$';
+    console.log(triangle);
 }
