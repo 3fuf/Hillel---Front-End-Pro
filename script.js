@@ -87,12 +87,13 @@ console.log(' ');
 console.log('№10');
 
 for (let multTable = 1; multTable <= 10; multTable++) {
-    console.log('Таблица умножения на '+ multTable);
 
     for (let multЕableМariable = 1; multЕableМariable <= 10; multЕableМariable++) {
-        console.log(multTable * multЕableМariable);
+        document.write('<p>' + multTable + '*' + multЕableМariable + '=' + (multTable * multЕableМariable) + '</p>');
     }
 }
+
+document.write("<p>"+i+"*"+j+" = "+(i*j)+"</p>");
 
 console.log(' ');
 
