@@ -97,6 +97,9 @@ console.log(' ');
 
 console.log('№11');
 
+/* let guessNumber = (Math.random() * 11);
+console.log(guessNumber); */
+
 let guessNumber = 9;
 while (true) {
     let value = +prompt('Угадайте число от 0 до 10', 'Введите число')
