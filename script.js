@@ -15,7 +15,6 @@ function calcAvarage (i, j) {
 console.log(calcAvarage(2, 3));
 
 function calc(x, y, action) {
-    let result = 0;
     switch (action) {
         case '+':
             return result = x + y;
@@ -28,7 +27,7 @@ function calc(x, y, action) {
         case '%':
             return result = x % y;
         case '^':
-            return result = x ^ y;
+            return result = x ** y;
     }
 }
 console.log(calc(2, 1, '+'));
