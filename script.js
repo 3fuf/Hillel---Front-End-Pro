@@ -17,17 +17,17 @@ console.log(calcAvarage(2, 3));
 function calc(x, y, action) {
     switch (action) {
         case '+':
-            return result = x + y;
+            return x + y;
         case '-':
-            return result = x - y;
+            return x - y;
         case '*':
-            return result = x * y;
+            return x * y;
         case '/':
-            return result = x / y;
+            return x / y;
         case '%':
-            return result = x % y;
+            return x % y;
         case '^':
-            return result = x ** y;
+            return x ** y;
     }
 }
 console.log(calc(2, 1, '+'));
