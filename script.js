@@ -29,12 +29,15 @@ function isEqual(x, y) {
     const list1 = Object.keys(x).length;
     const list2 = Object.keys(y).length;
 
-    for (const key in x) {
-      return true;
+    for (const keys in x) {
+      if(list1 !== list2 || x[keys] !== y[keys]) {
+        return false;
+      }
     }
-    return false;
+    return true;
 }
-console.log(isEqual(org = {}, org1 = {name: "Peater"}));
+console.log(isEqual({name: "Peater", lastName: "Parker"},{name: "Peater", lastName: "Ivan"}));
+console.log(isEqual({name: "Peater", lastName: "Parker"},{name: "Peater", lastName: "Parker"}));
 console.log(isEqual(origin, srcOb));
 
 console.log("№3")
