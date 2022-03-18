@@ -1,57 +1,46 @@
 console.log("№1")
 
-const origin = {
-    firstName: 'Peter',
-    lastName: 'Parker',
-    email: 'test@test.com'
-}
-const target = {};
-
-const firstOb = {
-    name: 'Kolia',
-    email: 'test@test.com'
-};
-
-const srcOb = {};
-
-function copy(x, y) {
-    for (const key in x) {
-        y[key] = x[key];
+function isSymbolPresentInString(str,symbol) {
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === symbol) {
+      return true;
+      break;
     }
-    return y;
+  }
+  return false;
 }
-console.log(copy(firstOb, srcOb))
-console.log(copy(origin, target))
+
+console.log(isSymbolPresentInString("abc", "a"));
+console.log(isSymbolPresentInString("abc", "e"));
+
 
 console.log("№2")
 
-function isEqual(x, y) {
-    const list1 = Object.keys(x).length;
-    const list2 = Object.keys(y).length;
-
-    for (const keys in x) {
-      if(list1 !== list2 || x[keys] !== y[keys]) {
-        return false;
-      }
+function getSymbolIndex(str,symbol) {
+  for (let i = -1; i < str.length; i++) {
+    if (str[i] === symbol) {
+      return i;
+      break;
     }
-    return true;
+  }
+  return -1;
 }
-console.log(isEqual({name: "Peater", lastName: "Parker"},{name: "Peater", lastName: "Ivan"}));
-console.log(isEqual({name: "Peater", lastName: "Parker"},{name: "Peater", lastName: "Parker"}));
-console.log(isEqual(origin, srcOb));
+console.log(getSymbolIndex("hello lol","h"));
+console.log(getSymbolIndex("hello lol","l"));
+console.log(getSymbolIndex("hello lol","v"));
 
 console.log("№3")
 
-function fn(str) {
-  const hash = {};
-  for(let i = 0; i < str.length; i++) {
-    if(hash[str[i]]) {
-      hash[str[i]]++;
-    } else {
-      hash[str[i]] = 1;
+function getNumberOfEven(n) {
+  const j = String(n);
+  let count = 0;
+  for (let i = 0; i < j.length; i++) {
+    if (+j[i] % 2 === 0) {
+      console.log(typeof j)
+      return count++;
     }
   }
-  return hash;
 }
 
-console.log(fn('aaaaabbbcccc'));
+console.log(getNumberOfEven(223344));
+console.log(getNumberOfEven(111));
