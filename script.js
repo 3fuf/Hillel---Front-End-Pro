@@ -17,7 +17,7 @@ console.log(isSymbolPresentInString("abc", "e"));
 console.log("№2")
 
 function getSymbolIndex(str,symbol) {
-  for (let i = -1; i < str.length; i++) {
+  for (let i = 0; i < str.length; i++) {
     if (str[i] === symbol) {
       return i;
       break;
@@ -32,14 +32,14 @@ console.log(getSymbolIndex("hello lol","v"));
 console.log("№3")
 
 function getNumberOfEven(n) {
-  const j = String(n);
+  const str = String(n);
   let count = 0;
-  for (let i = 0; i < j.length; i++) {
-    if (+j[i] % 2 === 0) {
-      console.log(typeof j)
-      return count++;
+  for (let i = 0; i < str.length; i++) {
+    if (+str[i] % 2 === 0) {
+      count++;
     }
   }
+  return count;
 }
 
 console.log(getNumberOfEven(223344));
