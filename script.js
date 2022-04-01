@@ -1,16 +1,18 @@
-function deepCopy (obj) {
-  const copyObj = Array.isArray(obj) ? [] : {};
-  for (let key in obj) {
-    if (obj[key]) {
-      if ("object" === typeof obj[key] || obj[key] !== null)
-      copyObj[key] = (obj[key]);
-      else copyObj[key] = obj[key];
-    }
+const deepCopy = (inObj) => {
+  if (typeof inObj !== "object" || inObj === null) {
+    return inObj;
   }
-  return copyObj;
+
+  outObj = Array.isArray(inObj) ? [] : {};
+
+  for (key in inObj) {
+    value = inObj[key];
+    outObj[key] = deepCopy(value);
+  }
+  return outObj;
 }
 
-const isArray = [1, 2, 3, { hello: "world" }];
+const isArray = [1, 2, 3, { hello: "world"}, ["HELLO"]];
 console.log("isArry:", isArray);
 
 const deepCopyArray = deepCopy(isArray);
