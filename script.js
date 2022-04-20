@@ -1,15 +1,10 @@
-function deepCopy(obj) {
-  const copy = {};
-  for(let key in obj) {
-    if(typeof(obj[key]) === 'object' && obj[key] !== null)
-    copy[key] = deepCopy(obj[key]);
-
-    else {
-      copy[key] = obj[key];
-    }
-  }
-  return copy;
+function isSum() {
+	let resault = 0;
+	return function(num) {
+		return resault += num;
+	}
 }
 
-let deepCopyArray = deepCopy([1, 2, 3, { hello: "world"}, ["HELLO"]]);
-console.log("deepCopyArray:", deepCopyArray);
+const sum = isSum();
+
+console.log(sum(3), sum(5), sum(20));
